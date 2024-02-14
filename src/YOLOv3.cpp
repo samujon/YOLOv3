@@ -25,15 +25,15 @@ void YOLOv3(engine::kind engine_kind){
 
 
 int main(int argc, char **argv) {
-        auto begin = std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::steady_clock::now().time_since_epoch())
-                .count();
-        //std::cout << "Start time: " << begin << std::endl;
-        YOLOv3(parse_engine_kind(argc, argv));
-        auto end = std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::steady_clock::now().time_since_epoch())
-                .count();
-        std::cout << "YOLOv3 executed" << std::endl;
-        //std::cout << "End time: " << end << std::endl;
-        std::cout << "Total time:" << (end - begin)/1000.0 << "s" << std::endl;
+    auto begin = std::chrono::duration_cast<std::chrono::milliseconds>(
+            std::chrono::steady_clock::now().time_since_epoch())
+            .count();
+    //std::cout << "Start time: " << begin << std::endl;
+    YOLOv3(parse_engine_kind(argc, argv));
+    auto end = std::chrono::duration_cast<std::chrono::milliseconds>(
+            std::chrono::steady_clock::now().time_since_epoch())
+            .count();
+    std::cout << "YOLOv3 executed" << std::endl;
+    //std::cout << "End time: " << end << std::endl;
+    std::cout << "Total time:" << (end - begin)/1000.0 << "s" << std::endl;
 }
